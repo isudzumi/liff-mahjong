@@ -1,0 +1,224 @@
+[
+    {
+        "name": "east",
+        "src": "./images/tiles/ji1-ton.gif",
+        "types": [ "honor", "wind" ],
+        "alt": "東"
+    },
+    {
+        "name": "south",
+        "src": "./images/tiles/ji2-nan.gif",
+        "types": [ "honor", "wind" ],
+        "alt": "南"
+    },
+    {
+        "name": "west",
+        "src": "./images/tiles/ji3-sha.gif",
+        "types": [ "honor", "wind" ],
+        "alt": "西"
+    },
+    {
+        "name": "north",
+        "src": "./images/tiles/ji4-pei.gif",
+        "types": [ "honor", "wind" ],
+        "alt": "北"
+    },
+    {
+        "name": "white",
+        "src": "./images/tiles/ji5-haku.gif",
+        "types": ["honor", "dragon"],
+        "alt": "白"
+    },
+    {
+        "name": "green",
+        "src": "./images/tiles/ji6-hatsu.gif",
+        "types": ["honor", "dragon"],
+        "alt": "發"
+    },
+    {
+        "name": "red",
+        "src": "./images/tiles/ji7-chun.gif",
+        "types": ["honor", "dragon"],
+        "alt": "中"
+    },
+    {
+        "name": "character1",
+        "src": "./images/tiles/man1.gif",
+        "types": ["suit", "character", "terminal"],
+        "alt": "一萬"
+    },
+    {
+        "name": "character2",
+        "src": "./images/tiles/man2.gif",
+        "types": ["suit", "character"],
+        "alt": "二萬"
+    },
+    {
+        "name": "character3",
+        "src": "./images/tiles/man3.gif",
+        "types": ["suit", "character"],
+        "alt": "三萬"
+    },
+    {
+        "name": "character4",
+        "src": "./images/tiles/man4.gif",
+        "types": ["suit", "character"],
+        "alt": "四萬"
+    },
+    {
+        "name": "character5",
+        "src": "./images/tiles/man5.gif",
+        "types": ["suit", "character"],
+        "alt": "五萬"
+    },
+    {
+        "name": "character6",
+        "src": "./images/tiles/man6.gif",
+        "types": ["suit", "character"],
+        "alt": "六萬"
+    },
+    {
+        "name": "character7",
+        "src": "./images/tiles/man7.gif",
+        "types": ["suit", "character"],
+        "alt": "七萬"
+    },
+    {
+        "name": "character8",
+        "src": "./images/tiles/man8.gif",
+        "types": ["suit", "character"],
+        "alt": "八萬"
+    },
+    {
+        "name": "character9",
+        "src": "./images/tiles/man9.gif",
+        "types": ["suit", "character"],
+        "alt": "九萬"
+    },
+    {
+        "name": "character5red",
+        "src": "./images/tiles/man-aka5.gif",
+        "types": ["suit", "character", "red"],
+        "alt": "赤五萬"
+    },
+    {
+        "name": "dot1",
+        "src": "./images/tiles/pin1.gif",
+        "types": ["suit", "dot", "terminal"],
+        "alt": "一筒"
+    },
+    {
+        "name": "dot2",
+        "src": "./images/tiles/pin2.gif",
+        "types": ["suit", "dot"],
+        "alt": "二筒"
+    },
+    {
+        "name": "dot3",
+        "src": "./images/tiles/pin3.gif",
+        "types": ["suit", "dot"],
+        "alt": "三筒"
+    },
+    {
+        "name": "dot4",
+        "src": "./images/tiles/pin4.gif",
+        "types": ["suit", "dot"],
+        "alt": "四筒"
+    },
+    {
+        "name": "dot5",
+        "src": "./images/tiles/pin5.gif",
+        "types": ["suit", "dot"],
+        "alt": "五筒"
+    },
+    {
+        "name": "dot6",
+        "src": "./images/tiles/pin6.gif",
+        "types": ["suit", "dot"],
+        "alt": "六筒"
+    },
+    {
+        "name": "dot7",
+        "src": "./images/tiles/pin7.gif",
+        "types": ["suit", "dot"],
+        "alt": "七筒"
+    },
+    {
+        "name": "dot8",
+        "src": "./images/tiles/pin8.gif",
+        "types": ["suit", "dot"],
+        "alt": "八筒"
+    },
+    {
+        "name": "dot9",
+        "src": "./images/tiles/pin9.gif",
+        "types": ["suit", "dot", "terminal"],
+        "alt": "九筒"
+    },
+    {
+        "name": "dot5red",
+        "src": "./images/tiles/pin-aka5.gif",
+        "types": ["suit", "dot", "red"],
+        "alt": "赤五筒"
+    },
+    {
+        "name": "bamboo1",
+        "src": "./images/tiles/sou1.gif",
+        "types": ["suit", "bamboo", "terminal"],
+        "alt": "一索"
+    },
+    {
+        "name": "bamboo2",
+        "src": "./images/tiles/sou2.gif",
+        "types": ["suit", "bamboo"],
+        "alt": "二索"
+    },
+    {
+        "name": "bamboo3",
+        "src": "./images/tiles/sou3.gif",
+        "types": ["suit", "bamboo"],
+        "alt": "三索"
+    },
+    {
+        "name": "bamboo4",
+        "src": "./images/tiles/sou4.gif",
+        "types": ["suit", "bamboo"],
+        "alt": "四索"
+    },
+    {
+        "name": "bamboo5",
+        "src": "./images/tiles/sou5.gif",
+        "types": ["suit", "bamboo"],
+        "alt": "五索"
+    },
+    {
+        "name": "bamboo6",
+        "src": "./images/tiles/sou6.gif",
+        "types": ["suit", "bamboo"],
+        "alt": "六索"
+    },
+    {
+        "name": "bamboo7",
+        "src": "./images/tiles/sou7.gif",
+        "types": ["suit", "bamboo"],
+        "alt": "七索"
+    },
+    {
+        "name": "bamboo8",
+        "src": "./images/tiles/sou8.gif",
+        "types": ["suit", "bamboo"],
+        "alt": "八索"
+    },
+    {
+        "name": "bamboo9",
+        "src": "./images/tiles/sou9.gif",
+        "types": ["suit", "bamboo", "terminal"],
+        "alt": "九索"
+    },
+    {
+        "name": "bamboo5red",
+        "src": "./images/tiles/sou-aka5.gif",
+        "types": ["suit", "bamboo", "red"],
+        "alt": "赤五索"
+    }
+]
