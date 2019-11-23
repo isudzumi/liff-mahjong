@@ -1,4 +1,5 @@
 import React from 'react'
+import { Tile } from './tile'
 import tilesMap from './config/tiles-map.json'
 
 const layoutMap = [
@@ -16,7 +17,7 @@ export const TilesList = () => (
                 {
                     layoutRow.map((type) => {
                         const tiles = tilesMap.filter(tile => tile.types.includes(type))
-                        return tiles.map(tile => <img src={tile.src} alt={tile.alt} key={tile.name} />)
+                        return tiles.map((tile, idx) => <Tile tile={tile} key={idx} />)
                     })
                 }
             </div>
