@@ -1,0 +1,16 @@
+{
+    "name": "liff-mahjong",
+    "version": 2,
+    "env": {
+        "myLiffId": "@my-liff-id",
+        "PORT": "80"
+    },
+    "builds": [
+        { "src": "server.js", "use": "@now/node" }
+    ],
+    "routes": [
+        { "src": "/upload", "methods": ["POST"], "dest": "/server.js" },
+        { "handle": "filesystem" },
+        { "src": "/(.*)", "methods": ["GET"], "dest": "/server.js" }
+    ]
+}
