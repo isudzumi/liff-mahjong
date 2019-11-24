@@ -22,6 +22,11 @@
           document.getElementById("liffInitErrorMessage").classList.remove('hidden');
       });
     }
+    document.addEventListener('load', () => {
+      fetch('/send-id')
+        .then(res => res.json())
+        .then(({id}) => initializeLiff(id))
+    })
     const buttonPost = document.querySelector('#post-message')
     buttonPost.addEventListener('click', function() {
       if(!liff.isInClient()) {
@@ -29,20 +34,24 @@
         return
       }
       const canvas = document.querySelector('canvas')
+      canvas.style.background = 'white' // Default background 'transparent' turns into black on jpeg image
       const base64Image = canvas.toDataURL().replace('data:image/png;base64,', '')
-      const requestBody = new FormData()
-      requestBody.append('image', base64Image)
-      requestBody.append('type', 'base64')
-      /* Upload Image */
-      fetch('https://api.imgur.com/3/upload', {
+      fetch('/upload', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          type: 'base64',
+          image: base64Image
+        })
       })
-      .then(function(res) {
-        return res.json()
-      })
-      .then(function(imageData) {
+      .then(res => res.json())
+      .then((imageData) => {
         liff.sendMessages([{
           'type': 'image',
-          'originalContentUrl': imageData.link
+          'originalContentUrl': imageData.imageUrl,
+          'previewImageUrl': imageData.thumbnailUrl
         }])
       })
       .catch(function(e) {
