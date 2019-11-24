@@ -17,7 +17,7 @@ export const TilesList = () => (
                 {
                     layoutRow.map((type) => {
                         const tiles = tilesMap.filter(tile => tile.types.includes(type))
-                        return tiles.map((tile, idx) => <Tile tile={tile} key={idx} />)
+                        return tiles.map((tile, idx) => <Tile tile={tile} key={tile.name} />)
                     })
                 }
             </div>

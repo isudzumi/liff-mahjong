@@ -1,16 +1,15 @@
-import React from 'react'
-
-interface Tile {
-    name: string;
-    src: string;
-    alt: string;
-    types: string[];
-}
+import React, { useContext } from 'react'
+import { HandAreaContext } from './contexts'
+import { ITile } from './types'
 
 interface Props {
-    tile: Tile
+    tile: ITile
 }
 
-export const Tile: React.FC<Props> = ({ tile }: { tile: Tile }) => {
-    return <img src={tile.src} alt={tile.alt} />
+export const Tile: React.FC<Props> = ({ tile }: { tile: ITile }) => {
+    const drawTile = useContext(HandAreaContext)
+    const handleClick = () => drawTile(tile)
+    return (
+        <img src={tile.src} alt={tile.alt} onClick={handleClick} />
+    )
 }
