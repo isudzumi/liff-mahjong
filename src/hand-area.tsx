@@ -4,10 +4,13 @@ import { Stage, Layer } from 'react-konva'
 
 export const HandArea = ({ tiles }: { tiles: JSX.Element[]}) => {
     return (
-        <Stage width={30*15} height={100}>
-            <Layer>
-                {tiles}
-            </Layer>
-        </Stage>
+        <>
+            <Stage width={30*15} height={100}>
+                <Layer>
+                    {tiles}
+                </Layer>
+            </Stage>
+            <button id="post-message">画像を投稿</button>
+        </>
     )
 }
