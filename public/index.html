@@ -10,27 +10,23 @@
     <div id="root"></div>
   </body>
   <script>
-    function initializeLiff(myLiffId) {
+    const initializeLiff = (myLiffId) => {
       liff.init({
         liffId: myLiffId
       })
-      .then(() => {
-          initializeApp();
-      })
       .catch((err) => {
-          document.getElementById("liffAppContent").classList.add('hidden');
-          document.getElementById("liffInitErrorMessage").classList.remove('hidden');
+          window.alert('Fail to initialize LIFF SDK')
       });
     }
-    document.addEventListener('load', () => {
+    window.addEventListener('load', () => {
       fetch('/send-id')
         .then(res => res.json())
         .then(({id}) => initializeLiff(id))
     })
     const buttonPost = document.querySelector('#post-message')
-    buttonPost.addEventListener('click', function() {
+    buttonPost.addEventListener('click', () => {
       if(!liff.isInClient()) {
-        console.error('Fail to initialize')
+        console.error('This site is not opened inside LINE talk room')
         return
       }
       const canvas = document.querySelector('canvas')
@@ -50,11 +46,12 @@
       .then((imageData) => {
         liff.sendMessages([{
           'type': 'image',
-          'originalContentUrl': imageData.imageUrl,
-          'previewImageUrl': imageData.thumbnailUrl
+          'originalContentUrl': '/' + imageData.imageUrl,
+          'previewImageUrl': '/' + imageData.thumbnailUrl
         }])
       })
       .catch(function(e) {
+        window.alert(e)
         console.error(e)
       })
     })
