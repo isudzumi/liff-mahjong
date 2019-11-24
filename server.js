@@ -1,4 +1,6 @@
 const fs = require('fs')
+const path = require('path')
+const qs = require('querystring')
 const express = require('express')
 const app = express()
 const sharp = require('sharp')
@@ -21,6 +23,10 @@ const removeFiles = (files) => {
 app.use(express.static(STATIC_DIR))
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.sendFile('index.html', { root: path.resolve(__dirname, 'build') })
+})
+
 app.get('/send-id', (req, res) => {
     res.json({ id: myLiffId })
 })
@@ -31,7 +37,7 @@ app.post('/upload', (req, res) => {
         res.status(500)
     }
     const buf = Buffer.from(image, type)
-    const baseFileName = image.substring(0, 5)
+    const baseFileName = qs.escape(image.substring(0, 5))
     const originalFileName = `${baseFileName}.jpg`
     const thumbnailFileName = `${baseFileName}-thumbnail.jpg`
     sharp(buf)
