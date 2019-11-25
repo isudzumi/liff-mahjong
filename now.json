@@ -2,7 +2,8 @@
     "name": "liff-mahjong",
     "version": 2,
     "env": {
-        "myLiffId": "@my-liff-id",
+        "MY_LIFF_ID": "@my-liff-id",
+        "IMGUR_CLIENT_ID": "@imgur-client-id",
         "PORT": "80"
     },
     "builds": [
