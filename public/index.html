@@ -24,15 +24,15 @@
         .then(({id}) => initializeLiff(id))
     })
     const buttonPost = document.querySelector('#post-message')
-    buttonPost.addEventListener('click', () => {
+    buttonPost.addEventListener('click', async () => {
       if(!liff.isInClient()) {
         console.error('This site is not opened inside LINE talk room')
         return
       }
       const canvas = document.querySelector('canvas')
-      canvas.style.background = 'white' // Default background 'transparent' turns into black on jpeg image
-      const base64Image = canvas.toDataURL().replace('data:image/png;base64,', '')
-      fetch('/upload', {
+      const mimeType = 'image/jpeg'
+      const base64Image = canvas.toDataURL(mimeType).replace(`data:${mimeType};base64,`, '')
+      const imageData = await fetch('/upload', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -41,18 +41,16 @@
           type: 'base64',
           image: base64Image
         })
-      })
-      .then(res => res.json())
-      .then((imageData) => {
-        liff.sendMessages([{
+      }).then(res => res.json())
+
+      await liff.sendMessages([{
           'type': 'image',
-          'originalContentUrl': '/' + imageData.imageUrl,
-          'previewImageUrl': '/' + imageData.thumbnailUrl
-        }])
-      })
-      .catch(function(e) {
+          'originalContentUrl': imageData.imageUrl,
+          'previewImageUrl': imageData.thumbnailUrl
+      }])
+      .then(liff.closeWindow())
+      .catch((e) => {
         window.alert(e)
-        console.error(e)
       })
     })
   </script>
