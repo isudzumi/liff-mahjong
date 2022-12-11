@@ -7,7 +7,7 @@
     "@types/node": "12.12.11",
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "form-data": "^3.0.0",
     "node-fetch": "^2.6.0",
     "react": "^16.12.0",
